@@ -37,9 +37,6 @@ def t_table(*table):
 
 class Automaton(object):
     def __init__(self, array_length=40, transition_table=None):
-        """
-        transition_table can be either a string of integers, variable or a dictionary
-        """
         self.array_length = array_length
         self.state = None
         self.translate_clean = str.maketrans('10', '# ')
@@ -63,7 +60,7 @@ class Automaton(object):
             self.state = ''.join([str(0) for i in range((self.array_length-1)//2)]) + '1' + ''.join([str(0) for i in range(self.array_length//2)])
 
     def display(self):
-        if self.state is not None:
+        if self.state:
             return self.state
         else:
             print('Not initialized')
