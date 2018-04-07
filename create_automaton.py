@@ -10,7 +10,7 @@ import os
 os.chdir('D:\\Documents\\600x\\Automate\\projecttest\\Automaton')
 import argparse
 import random
-from Automaton_class import *
+from .Automaton_class import *
 
 
 
